@@ -53,7 +53,6 @@ C:\Users\Nico\Desktop\Crombie\BibliotecaAPI\LibraryApplication\LibraryApplicatio
 C:\Users\Nico\Desktop\Crombie\BibliotecaAPI\LibraryApplication\LibraryApplication\obj\Debug\net8.0\LibraryApplication.csproj.CoreCompileInputs.cache
 C:\Users\Nico\Desktop\Crombie\BibliotecaAPI\LibraryApplication\LibraryApplication\obj\Debug\net8.0\LibraryApplication.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Nico\Desktop\Crombie\BibliotecaAPI\LibraryApplication\LibraryApplication\obj\Debug\net8.0\LibraryApplication.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Nico\Desktop\Crombie\BibliotecaAPI\LibraryApplication\LibraryApplication\obj\Debug\net8.0\LibraryApplication.sourcelink.json
 C:\Users\Nico\Desktop\Crombie\BibliotecaAPI\LibraryApplication\LibraryApplication\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Nico\Desktop\Crombie\BibliotecaAPI\LibraryApplication\LibraryApplication\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Nico\Desktop\Crombie\BibliotecaAPI\LibraryApplication\LibraryApplication\obj\Debug\net8.0\staticwebassets\msbuild.LibraryApplication.Microsoft.AspNetCore.StaticWebAssets.props

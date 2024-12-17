@@ -235,33 +235,35 @@ public class LibraryRepository : ILibraryRepository
         {
             // Verificar que el préstamo exista
             var sqlCheck = @"
-            SELECT COUNT(*) 
-            FROM Library 
-            WHERE UserId = @UserId AND BookIsbn = @BookIsbn";
+        SELECT COUNT(*) 
+        FROM Library 
+        WHERE UserId = @UserId AND BookIsbn = @BookIsbn";
 
             var exists = connection.ExecuteScalar<int>(sqlCheck, new { UserId = userId, BookIsbn = bookIsbn });
 
             if (exists == 0)
                 throw new Exception("This book was not borrowed by the user.");
 
-            // Eliminar el préstamo de la tabla Library
+            // Eliminar solo un préstamo (TOP 1)
             var sqlDelete = @"
-            DELETE FROM Library
-            WHERE UserId = @UserId AND BookIsbn = @BookIsbn";
+        DELETE TOP (1) 
+        FROM Library
+        WHERE UserId = @UserId AND BookIsbn = @BookIsbn";
 
             connection.Execute(sqlDelete, new { UserId = userId, BookIsbn = bookIsbn });
 
             // Incrementar la cantidad de libros disponibles
             var sqlUpdate = @"
-            UPDATE Books
-            SET Quantity = Quantity + 1
-            WHERE ISBN = @BookIsbn";
+        UPDATE Books
+        SET Quantity = Quantity + 1
+        WHERE ISBN = @BookIsbn";
 
             connection.Execute(sqlUpdate, new { BookIsbn = bookIsbn });
 
             return true;
         }
     }
+
 
 
     public IEnumerable<BookModel> GetUserBorrowedBooks(int userId)
